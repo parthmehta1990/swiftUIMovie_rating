@@ -11,7 +11,9 @@ import SwiftUI
 struct iosMovieAppApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            //MovieDetail(movie:  Movie(),newMovie: true,movieStorage: MovieStorage())
+            let movieStorage = MovieStorage()
+            MovieList().environmentObject(movieStorage)
         }
     }
 }
